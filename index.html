@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8">
+      <meta charset="UTF-">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
@@ -2713,8 +2713,8 @@ scene.add(pointLightHelper);*/
   let raycaster9 = new THREE.Raycaster();
   let intersections9;
   let divID9 = document.getElementById("idNum9");
-  let divMag9 = document.getElementById("magnitude");
-  let divCrd9 = document.getElementById("coordinates");
+  let divMag9 = document.getElementById("magnitude9");
+  let divCrd9 = document.getElementById("coordinates9");
   window.addEventListener("pointerdown", (event) => {
     pointer9.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer9.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -2723,13 +2723,13 @@ scene.add(pointLightHelper);*/
       return m.uv.subScalar(0.5).length() * 2 < 0.25; // check, if we're in the central circle only
     });
     //console.log(intersections);
-    if (intersections9.length > 0) {
+    if (intersections8.length > 0) {
       let iid9 = intersections9[0].instanceId;
-      let mi9 = markerInfo9[iid9];
+      let mi9 = markerInfo8[iid9];
       divID9.innerHTML = `<div class="iframe-container"> <iframe width="250" height="249" scrolling="no" allowfullscreen="true" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-popups-to-escape-sandbox" loading="eager"  src="https://rss.app/embed/v1/carousel/C4evqRMT9raTBtuJ" frameborder="0"></iframe></div>`;
       /*divMag.innerHTML = `Mag: <b>${mi.mag}</b>`;
       divCrd.innerHTML = `X: <b>${mi.crd.x.toFixed(2)}</b>; Y: <b>${mi.crd.y.toFixed(2)}</b>; Z: <b>${mi.crd.z.toFixed(2)}</b>`;*/
-      label9.position.copy(mi9.crd9);
+      labe9.position.copy(mi9.crd9);
       label9.element.animate(
         [
           {
