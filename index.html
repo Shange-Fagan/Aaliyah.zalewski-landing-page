@@ -2711,15 +2711,15 @@ scene.add(pointLightHelper);*/
   // UK news
   let pointer9 = new THREE.Vector2();
   let raycaster9 = new THREE.Raycaster();
-  let intersections9;
+  let intersection93;
   let divID9 = document.getElementById("idNum9");
-  let divMag9 = document.getElementById("magnitude");
-  let divCrd9 = document.getElementById("coordinates");
+  let divMag9 = document.getElementById("magnitude9");
+  let divCrd9 = document.getElementById("coordinates9");
   window.addEventListener("pointerdown", (event) => {
     pointer9.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer9.y = -(event.clientY / window.innerHeight) * 2 + 1;
     raycaster9.setFromCamera(pointer9, camera);
-    intersections9 = raycaster9.intersectObject(markers9).filter((m) => {
+    intersections9 = raycaster3.intersectObject(markers9).filter((m) => {
       return m.uv.subScalar(0.5).length() * 2 < 0.25; // check, if we're in the central circle only
     });
     //console.log(intersections);
@@ -2727,9 +2727,10 @@ scene.add(pointLightHelper);*/
       let iid9 = intersections9[0].instanceId;
       let mi9 = markerInfo9[iid9];
       divID9.innerHTML = `<div class="iframe-container"> <iframe width="250" height="249" scrolling="no" allowfullscreen="true" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-popups-to-escape-sandbox" loading="eager"  src="https://rss.app/embed/v1/carousel/C4evqRMT9raTBtuJ" frameborder="0"></iframe></div>`;
+      /*<link rel="stylesheet" href="style.css"> <!--Copy this line of code-->*/
       /*divMag.innerHTML = `Mag: <b>${mi.mag}</b>`;
       divCrd.innerHTML = `X: <b>${mi.crd.x.toFixed(2)}</b>; Y: <b>${mi.crd.y.toFixed(2)}</b>; Z: <b>${mi.crd.z.toFixed(2)}</b>`;*/
-      label9.position.copy(mi9.crd9);
+      label]9.position.copy(mi9.crd9);
       label9.element.animate(
         [
           {
